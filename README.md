@@ -11,3 +11,9 @@ Dependencies:
   vRhyme (v.) https://github.com/AnantharamanLab/vRhyme
 
   The following cutoffs and choices are curated for the metagenomic data used in HADAL - Danish Center for Hadal Research at the University of Southern Denmark.
+
+#Identify viral sequences in the assembly.
+
+The cutoff length is set to 5000, as that is the minimum size required downstream.
+
+    virsorter run --keep-original-seq -i assembly_contigs.fa -w vs2-pass1/Complete_contigs --include-groups dsDNAphage,NCLDV,RNA,ssDNA,lavidaviridae --min-length 5000 --min-score 0.5 -j 32 all
