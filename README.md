@@ -8,4 +8,6 @@ Dependencies:
   
   DRAMv (v.) https://github.com/WrightonLabCSU/DRAM
 
+  vRhyme (v.) https://github.com/AnantharamanLab/vRhyme
+
   The following cutoffs and choices are curated for the metagenomic data used in HADAL - Danish Center for Hadal Research at the University of Southern Denmark.
