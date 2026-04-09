@@ -1,17 +1,26 @@
 # Viral bioinformatics pipeline for HADAL
   The following steps and choices are curated for the metagenomic datasets produced in HADAL - Danish Center for Hadal Research at the University of Southern Denmark.
   This is also designed with a "global" approach in mind, analysing datasets from multiple trenches, and at the same time process the data in a way that (hopefully)
-  will be the most efficient and flexible for future needs, using different combinations of samples and datasets across all.
+  will be the most efficient and flexible for future needs, e.g. different combinations of samples and datasets across all.
 
 Within trench pipeline:
 viral identification (Virsorter2)
 QC (CheckV)
 viral prep (VirSorter2)
+merge sequences (final-viral-contigs.fa fpr each sample)
 dereplication (BBMap) - permanent save of dereplicated sequences
 annotation (DRAMv) - permanent save of annotation table
 vOTUs: 95% ANI clustering (skani) - permanent save complete cluster-member list
+relative abundance on vOTUs (metaBAT and samtools)
+network analysis on vOTUs (vCONTACT3)
+virus-host prediction (VHIP)
 
 Multi-trench pipeline:
+merge vOTUs for the target trenches/datasets
+dereplicate (BBmap)
+vOTUs: 95% ANI clustering (skani)
+network analysis on vOTUs (vCONTACT3)
+virus-host prediction (VHIP)
 
 ## Viral-identification-in-metagenomes
 Pipeline for the identification of viral sequences in metagenomic data using VirSorter2, with subsequent quality check using CheckV and DRAMv.
@@ -45,7 +54,6 @@ Run Virsorter2 again this time to prep files for DRAMv
 
     virsorter run --seqname-suffix-off --viral-gene-enrich-off --prep-for-dramv -i ~/combined.fna -w ~/vs2-pass2/ --include-groups dsDNAphage,ssDNA,RNA,NCLDV,lavidaviridae --min-length 5000 --min-score 0.5 -j 32 all
 
-We have large datasets of many samples, and choose to do the initial viral identification and QC steps on individual metagenomes. This saves us time and resources in not having to re-process samples again if future analyses needs a different sample cobmination (e.g. we want to compare two different trenches, or we want to compare only the first top cm sediment layers from all stations and all trenches).
 
 ## Merging samples
 Depending on the scope of the research question the appropriate samples are merged before downstream analyses. The default is to merge at the trench level.
