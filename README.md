@@ -4,23 +4,23 @@
   will be the most efficient and flexible for future needs, e.g. different combinations of samples and datasets across all.
 
 ### Within trench pipeline:
-viral identification (Virsorter2)
-QC (CheckV)
-viral prep (VirSorter2)
-merge sequences (final-viral-contigs.fa fpr each sample)
-dereplication (BBMap) - permanent save of dereplicated sequences
-annotation (DRAMv) - permanent save of annotation table
-vOTUs: 95% ANI clustering (skani) - permanent save complete cluster-member list
-relative abundance on vOTUs (metaBAT and samtools)
-network analysis on vOTUs (vCONTACT3)
-virus-host prediction (VHIP)
+- viral identification (Virsorter2)
+- QC (CheckV)
+- viral prep (VirSorter2)
+- merge sequences (final-viral-contigs.fa fpr each sample)
+- dereplication (BBMap) - permanent save of dereplicated sequences
+- annotation (DRAMv) - permanent save of annotation table
+- vOTUs: 95% ANI clustering (skani) - permanent save complete cluster-member list
+- relative abundance on vOTUs (metaBAT and samtools)
+- network analysis on vOTUs (vCONTACT3)
+- virus-host prediction (VHIP)
 
 ### Multi-trench pipeline:
-merge vOTUs for the target trenches/datasets
-dereplicate (BBmap)
-vOTUs: 95% ANI clustering (skani)
-network analysis on vOTUs (vCONTACT3)
-virus-host prediction (VHIP)
+- merge vOTUs for the target trenches/datasets
+- dereplicate (BBmap)
+- vOTUs: 95% ANI clustering (skani)
+- network analysis on vOTUs (vCONTACT3)
+- virus-host prediction (VHIP)
 
 ## Preperation work
 Some initial housekeeping work is often required to manage sample names and ensuring unique identifiers in different constellations.
