@@ -3,7 +3,7 @@
   This is also designed with a "global" approach in mind, analysing datasets from multiple trenches, and at the same time process the data in a way that (hopefully)
   will be the most efficient and flexible for future needs, e.g. different combinations of samples and datasets across all.
 
-Within trench pipeline:
+### Within trench pipeline:
 viral identification (Virsorter2)
 QC (CheckV)
 viral prep (VirSorter2)
@@ -15,12 +15,24 @@ relative abundance on vOTUs (metaBAT and samtools)
 network analysis on vOTUs (vCONTACT3)
 virus-host prediction (VHIP)
 
-Multi-trench pipeline:
+### Multi-trench pipeline:
 merge vOTUs for the target trenches/datasets
 dereplicate (BBmap)
 vOTUs: 95% ANI clustering (skani)
 network analysis on vOTUs (vCONTACT3)
 virus-host prediction (VHIP)
+
+## Preperation work
+Some initial housekeeping work is often required to manage sample names and ensuring unique identifiers in different constellations.
+NOTE: before running the rename_assemblies.py script ensure the right path is given to the folder containing the assemblies and the output folder for the renamed ones.
+Also check that you have all the sample names included in the "translation" key in the script.
+
+    python3 rename_assemblies.py
+
+The script will tell you if there are samples which did not get their headers renamed.
+
+Now we changed the headers from something like "Complete_Site_1_Depth_0_0000000001" to "AT01D00_c0000000001" thats a more manageable sample ID string which we can carry on with in all the intended downstream purposes.
+
 
 ## Viral-identification-in-metagenomes
 Pipeline for the identification of viral sequences in metagenomic data using VirSorter2, with subsequent quality check using CheckV and DRAMv.
@@ -34,7 +46,6 @@ Dependencies:
 
   vRhyme (v.) https://github.com/AnantharamanLab/vRhyme
 
-  The following cutoffs and choices are curated for the metagenomic data used in HADAL - Danish Center for Hadal Research at the University of Southern Denmark.
 
 #Identify viral sequences in the assembly.
 
