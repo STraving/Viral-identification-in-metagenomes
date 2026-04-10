@@ -22,7 +22,7 @@
 - network analysis on vOTUs (vCONTACT3)
 - virus-host prediction (VHIP)
 
-## Preperation work
+## Preparation work
 Some initial housekeeping work is often required to manage sample names and ensuring unique identifiers in different constellations.
 NOTE: before running the rename_assemblies.py script ensure the right path is given to the folder containing the assemblies and the output folder for the renamed ones.
 Also check that you have all the sample names included in the "translation" key in the script.
