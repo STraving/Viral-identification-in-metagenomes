@@ -24,8 +24,13 @@ by Sachia J. Traving, University of Southern Denmark and University of Copenhage
 - network analysis on vOTUs (vCONTACT3)
 - virus-host prediction (VHIP)
 
+## Installation
+
+For installing the required tools I would like to draw attention to protocol by Jiarong Guo and the Sullivan Lab (https://dx.doi.org/10.17504/protocols.io.btv8nn9w), I think they did a great job explaining things and the most common challenges in setting up the tools. Do notice that after step 4 is where this guide diverge from this protocol. 
+
 ## Preparation work
-Some initial housekeeping work is often required to manage sample names and ensuring unique identifiers in different constellations.
+
+Some initial housekeeping work is often required to manage sample names and ensuring unique identifiers in different constellations. This is particular for HADAL samples but it is worth to pay attention to if you are from outside HADAL.
 NOTE: before running the rename_assemblies.py script ensure the right path is given to the folder containing the assemblies and the output folder for the renamed ones.
 Also check that you have all the sample names included in the "translation" key in the script.
 
@@ -129,7 +134,9 @@ To normalize the coverage values so we can compare between samples we use MetaBA
 
 ### 9. Network analysis
 
-We use vCONTACT3 by 
+We use vCONTACT3 by Buldoc et al., 2025 (preprint: doi: https://doi.org/10.1101/2025.11.06.686974)
+
+
 
 
 ### 10. Virus-host predictions
@@ -141,12 +148,19 @@ Right now we are testing out the tool VHIP by Bastien et al., 2024 (https://doi.
 The steps for producing the prokaryotic bins (MAGs) are not described here. we might add the information at a later stage.
 
 
-# Multi-trench studies
-We merge the (merged and dereplicated) datasets from each trench and dereplicate again across trenches.
+# Multi-collection studies
+
+We merge the datasets from the collections of interest.
+There are some different options to choose.
+
+1. Merge dereplicated contigs, dereplicate again, followed by clustering and abundance calculations on vOTU reps.
+2. merge vOTU collection, dereplicate, cluster again and source abundance values from step 7 to calculate new average abundances.
+3. merge vOTU collection, dereplicate, abundance calculations on combined vOTU collection reps.
 
 
 
 
 ## Relative abundance
 
+if the multi-collection data is merged on the vOTU level then the abundance data can be sourced back from the initial sample processing (step 7). using the 
 ## Viral network
