@@ -1,8 +1,8 @@
 # Viral bioinformatics pipeline for HADAL
 by Sachia J. Traving, University of Southern Denmark and University of Copenhagen
 
-  The following steps and choices are curated for the metagenomic datasets produced in HADAL - Danish Center for Hadal Research at the University of Southern Denmark.
-  This is also designed with a "global" approach in mind, analysing datasets from multiple trenches, and at the same time process the data in a way that (hopefully)
+  The following steps and choices are curated for the metagenomic datasets produced in HADAL - Danish Center for Hadal Research at the University of Southern Denmark https://www.sdu.dk/en/forskning/hadal
+  The analyses steps are designed with a "global" approach in mind, analysing datasets from multiple trenches, and at the same time process the data in a way that (hopefully)
   will be the most efficient and flexible for future needs, e.g. different combinations of samples and datasets across all.
 
 ### Within trench pipeline:
