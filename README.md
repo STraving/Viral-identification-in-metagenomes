@@ -26,7 +26,7 @@ by Sachia J. Traving, University of Southern Denmark and University of Copenhage
 
 ## Installation
 
-For installing the required tools I would like to draw attention to protocol by Jiarong Guo and the Sullivan Lab (https://dx.doi.org/10.17504/protocols.io.btv8nn9w), I think they did a great job explaining things and the most common challenges in setting up the tools. Do notice that after step 4 is where this guide diverge from this protocol. 
+For installing the required tools I would like to refer to the protocol by Jiarong Guo and the Sullivan Lab (https://dx.doi.org/10.17504/protocols.io.btv8nn9w), I think they did a great job explaining things and the most common challenges in setting up the tools. Do notice that after step 4 is where this guide diverge from their protocol. 
 
 ## Preparation work
 
